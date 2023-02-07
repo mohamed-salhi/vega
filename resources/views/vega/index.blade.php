@@ -44,21 +44,16 @@
             <h1>Our Services</h1>
             <p>Our services are part of the creative plan to satisfy our customers and meet their needs</p>
             <div class="cards_sec2 col-lg-12">
-                <div class="card_first_design">
-                    <img class=" bounceInDown" src="{{ asset('vegaasset/images/new/Group 42973.png') }}" alt="">
-                    <h3>UI/UX Design</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, minus nesciunt! Quaerat eius blanditiis quae facere totam aperiam, omnis molestiae aspernatur minus officiis, praesentium eos repellat enim tempora fugit doloribus?</p>
-                </div>
-                <div class="card_first_design">
-                    <img class=" bounceInDown" src="{{ asset('vegaasset/images/new/svgexport-7 (2).svg') }}" alt="">
-                    <h3>UI/UX Design</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, minus nesciunt! Quaerat eius blanditiis quae facere totam aperiam, omnis molestiae aspernatur minus officiis, praesentium eos repellat enim tempora fugit doloribus?</p>
-                </div>
-                <div class="card_first_design">
-                    <img class=" bounceInDown" src="{{ asset('vegaasset/images/new/Group 42972.svg') }}" alt="">
-                    <h3>UI/UX Design</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, minus nesciunt! Quaerat eius blanditiis quae facere totam aperiam, omnis molestiae aspernatur minus officiis, praesentium eos repellat enim tempora fugit doloribus?</p>
-                </div>
+
+                @foreach($Category as $item)
+                    <div class="card_first_design">
+                        <img class=" bounceInDown" src="{{ asset('vegaasset/images/new/Group 42973.png') }}" alt="">
+                        <h3>{{$item->name}}</h3>
+                        <p> {{$item->dest}}</p>
+                    </div>
+
+                @endforeach
+
             </div>
         </div>
     </section>
